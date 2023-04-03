@@ -21,8 +21,10 @@
           <p class="result-text">TAKES THE ROUND</p>
         </div>
         <div class="result-buttons">
-          <button class="quit-btn">quit</button>
-          <button class="next-round-btn">next round</button>
+          <button class="quit-btn" onclick="quit()">quit</button>
+          <button class="next-round-btn" onclick="nextRound()">
+            next round
+          </button>
         </div>
       </div>
     </div>
@@ -32,8 +34,10 @@
           <p class="result-text">ROUND TIED</p>
         </div>
         <div class="result-buttons">
-          <button class="quit-btn">quit</button>
-          <button class="next-round-btn">next round</button>
+          <button class="quit-btn" onclick="quit()">quit</button>
+          <button class="next-round-btn" onclick="nextRound()">
+            next round
+          </button>
         </div>
       </div>
     </div>
@@ -105,7 +109,7 @@
           <img src="./assets/icon-x-gray.svg" alt="x-icon-gray" />
           <h3>turn</h3>
         </div>
-        <button class="restart">
+        <button class="restart" onclick="openRestartModal()">
           <img src="./assets/icon-restart.svg" alt="restart-icon" />
         </button>
       </div>
@@ -127,7 +131,7 @@
         </div>
         <div class="statistic-box">
           <h3>ties</h3>
-          <span>0</span>
+          <span id="tie-score">0</span>
         </div>
         <div class="statistic-box">
           <h3 id="o-score-text">O(you)</h3>
