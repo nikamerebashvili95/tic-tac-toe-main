@@ -13,6 +13,43 @@
     <title>Frontend Mentor | Tic Tac Toe</title>
   </head>
   <body>
+    <div id="modal">
+      <div class="modal-box">
+        <p class="result-info-text">OH NO, YOU LOST…</p>
+        <div>
+          <img src="./assets/icon-x.svg" alt="" />
+          <p class="result-text">TAKES THE ROUND</p>
+        </div>
+        <div class="result-buttons">
+          <button class="quit-btn">quit</button>
+          <button class="next-round-btn">next round</button>
+        </div>
+      </div>
+    </div>
+    <div id="modal-tie">
+      <div class="modal-box">
+        <div>
+          <p class="result-text">ROUND TIED</p>
+        </div>
+        <div class="result-buttons">
+          <button class="quit-btn">quit</button>
+          <button class="next-round-btn">next round</button>
+        </div>
+      </div>
+    </div>
+    <div id="modal-restart">
+      <div class="modal-box">
+        <div>
+          <p class="result-text">RESTART GAME?</p>
+        </div>
+        <div class="result-buttons">
+          <button class="quit-btn" onclick="closeModal()">NO, CANCEL</button>
+          <button class="next-round-btn" onclick="restartFc()">
+            YES, RESTART
+          </button>
+        </div>
+      </div>
+    </div>
     <section id="home">
       <div class="home-header">
         <img src="assets/icon-x.svg" alt="x-icon" />
@@ -85,16 +122,16 @@
       </div>
       <div class="statistics">
         <div class="statistic-box">
-          <h3>X(you)</h3>
-          <span>0</span>
+          <h3 id="x-score-text">X(you)</h3>
+          <span id="x-score">0</span>
         </div>
         <div class="statistic-box">
           <h3>ties</h3>
           <span>0</span>
         </div>
         <div class="statistic-box">
-          <h3>O(you)</h3>
-          <span>0</span>
+          <h3 id="o-score-text">O(you)</h3>
+          <span id="o-score">0</span>
         </div>
       </div>
     </section>
