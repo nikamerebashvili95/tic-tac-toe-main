@@ -16,7 +16,7 @@ const modalResultText = document.querySelector(".result-text");
 const modalRestart = document.querySelector("#modal-restart");
 
 let player1 = "x";
-let mode = "cpu";
+
 let turn = "x";
 let freeButtons = [0, 1, 2, 3, 4, 5, 6, 7, 8];
 let xArray = [];
@@ -167,7 +167,6 @@ const startGame = (modeParam) => {
   home.style.display = "none";
   board.style.display = "flex";
   document.body.style.alignItems = "flex-start";
-  mode = modeParam;
   onHoverEffects();
   createClickedFunctions();
   if (modeParam === "player") {
@@ -191,7 +190,6 @@ const startGame = (modeParam) => {
 
 const reset = () => {
   player1 = "x";
-  mode = "cpu";
   turn = "x";
   freeButtons = [0, 1, 2, 3, 4, 5, 6, 7, 8];
   xArray = [];
@@ -214,7 +212,6 @@ const quit = () => {
 
 const nextRound = () => {
   reset();
-  startGame(mode);
 };
 
 const openRestartModal = () => {
@@ -233,6 +230,5 @@ const restartFc = () => {
   xScoreElement.textContent = 0;
   tieScoreElement.textContent = 0;
   reset();
-  startGame(mode);
   modalRestart.style.display = "none";
 };

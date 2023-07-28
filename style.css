@@ -104,14 +104,7 @@ body {
   cursor: pointer;
   font-family: "Outfit", sans-serif;
 }
-.cpu-btn {
-  background-color: var(--orange);
-  box-shadow: inset 0px -8px 0px #cc8b13;
-  margin-top: 32px;
-}
-.cpu-btn-text {
-  color: var(--darkBg);
-}
+
 .player-btn {
   background-color: var(--sky);
   margin-top: 30px;
